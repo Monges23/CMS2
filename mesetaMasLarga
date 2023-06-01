@@ -1,0 +1,16 @@
+def mesetaMasLarga(l: List[int]) -> int :
+  contador = 1
+  repeticiones= []
+  if len(l) == 0:
+    return 0
+  elif len(l) == 1:
+    return 1
+  else:
+    for i in range(len(l) - 1):
+      if l[i] == l[i + 1]:
+        contador +=1
+      else:
+        repeticiones.append(contador)
+        contador = 1
+    repeticiones.append(contador)
+  return (max(repeticiones))
